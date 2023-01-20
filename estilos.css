@@ -1,0 +1,97 @@
+.body {
+    width: 100vw;
+    background-color: #F3F3F3;
+}
+ 
+.topo, .barra-inferior {
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #FFFFFF;
+}
+
+.topo {
+    left: 0px;
+    top: 0px;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.topo img {
+    width: 75px;
+    height: 53px;
+    margin-left: 22px;
+}
+
+.topo ion-icon{
+    height: 31px;
+    width: 42px;
+    margin-right: 24px;
+}
+
+ul{
+    margin-top: 106px;
+    background-color: #F3F3F3;
+ }
+li {
+    height: 40px;
+    margin-bottom: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.entra-sai {
+    background-color: #DCDCDC;
+}
+
+.barra-inferior {
+    left: 0px;
+    bottom: 0px;
+
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.barra-inferior input {
+    width: 90vw;
+    background: #FFFFFF;
+    border: none;
+    color: #000000;
+    outline: none;
+    resize: none;
+    margin-left: 17px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  
+}
+
+.barra-inferior input::-webkit-input-placeholder {
+    color:#000000;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+.barra-inferior ion-icon {
+    height: 26px;
+    width: 26px;
+    margin-right: 27px;
+
+
+}
