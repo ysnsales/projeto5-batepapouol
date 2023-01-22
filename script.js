@@ -56,6 +56,9 @@ function buscarMensagens(){
 
 function mostrarMensagens (resposta2){
     mensagens = resposta2.data;
+    
+    chat.innerText ="";
+    
     for (let i = 0; i < mensagens.length; i++){
         let from = resposta2.data[i].from;
         let to = resposta2.data[i].to;
@@ -75,10 +78,13 @@ function mostrarMensagens (resposta2){
         </li>
         `;
         }
-        mostrarUltimaMensagem();
     }
+    //mostrar ultima mensagem
+    const chatLast = document.querySelector('.chat li:last-child');
+    chatLast.scrollIntoView();
+        
 }
 
-function mostrarUltimaMensagem(){
-}
+
+
 entrarNaSala();
