@@ -1,6 +1,7 @@
 .body {
-    width: 100vw;
     background-color: #F3F3F3;
+    width: 100vw;
+    height: 100vw;
 }
  
 .topo, .barra-inferior {
@@ -12,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
 
+    z-index: 1;
     background: #FFFFFF;
 }
 
@@ -35,9 +37,17 @@
 }
 
 ul{
-    margin-top: 106px;
     background-color: #F3F3F3;
+    width: 100vw;
+    height: 100vw;
+    margin-top: 106px;
+    margin-bottom: 80px;
  }
+
+.escondido {
+    display: none;
+}
+
 li {
     height: 40px;
     margin-bottom: 4px;
@@ -51,10 +61,17 @@ li {
     background-color: #FFFFFF;
 }
 
-.entra-sai {
+.status {
     background-color: #DCDCDC;
 }
 
+.hora {
+    color:#AAAAAA;
+    margin-left: 8px;
+    margin-right: 8px;
+    
+
+}
 .barra-inferior {
     left: 0px;
     bottom: 0px;
