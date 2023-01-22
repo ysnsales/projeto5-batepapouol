@@ -2,6 +2,8 @@ let nome;
 let mensagens = [];
 let chat = document.querySelector('.chat');
 
+let mensagemEnviada;
+
 //Logar
 function entrarNaSala() {
    nome = prompt('Digite o seu nome');
@@ -68,14 +70,14 @@ function mostrarMensagens (resposta2){
 
         if (type === "status"){
             chat.innerHTML += `
-            <li class="${type}" data-test="message">
-            <span class="hora">(${time})</span> &nbsp <strong> ${from} </strong> &nbsp ${text}
-            </li>
+            <li class="${type}" data-test="message"><p>
+            <span class="hora">(${time})</span> <strong> ${from} </strong>${text}
+            </p></li>
             `;
         }else if (type === "message") {
-            chat.innerHTML += ` <li class="${type}" data-test="message">
-            <span class="hora">(${time})</span> &nbsp <strong> ${from} </strong> &nbsp para<strong> &nbsp ${to}: &nbsp </strong>${text}
-        </li>
+            chat.innerHTML += ` <li class="${type}" data-test="message"><p>
+            <span class="hora">(${time})</span><strong> ${from} </strong> para<strong> ${to}: </strong>${text}
+        </p></li>
         `;
         }
     }
@@ -85,6 +87,28 @@ function mostrarMensagens (resposta2){
         
 }
 
+//Enviar mensagens
+
+//habilitar enter
+document.addEventListener('keypress', function(e){
+    if(e.which == 13){
+       enviarMensagens();
+    }
+ }, false);
+
+function enviarMensagens() {
+    let texto = document.querySelector('.input').value;
+    mensagemEnviada = {
+        from: nome,
+        to: 'Todos',
+        text: texto,
+        type: "message" // ou "private_message" para o bônus
+    }
+
+    let enviada  = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", mensagemEnviada);
+    document.querySelector('.input').value='';
+
+}
 
 
 entrarNaSala();
