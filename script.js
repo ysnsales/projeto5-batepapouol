@@ -80,7 +80,7 @@ function mostrarMensagens (resposta2){
             <span class="hora">(${time})</span><strong> ${from} </strong> para<strong> ${to}: </strong>${text}
         </p></li>
         `;
-        }else if (type === "private_message") {
+        }else if (type === "private_message" && (nome === to || nome === from)) {
             chat.innerHTML += ` <li class="${type}" data-test="message"><p>
             <span class="hora">(${time})</span><strong> ${from} </strong> reservadamente para<strong> ${to}: </strong>${text}
         </p></li>
