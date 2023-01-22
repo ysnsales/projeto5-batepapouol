@@ -45,6 +45,7 @@ function verificaStatus() {
 
 function desconectado(){
     alert('Você foi desconectado. Por favor, realize o login novamente');
+    return window.location.reload();
 }
 
 
@@ -108,7 +109,9 @@ function enviarMensagens() {
     let enviada  = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages", mensagemEnviada);
     document.querySelector('.input').value='';
 
-}
+    enviada.catch(desconectado);
+    enviada.then(buscarMensagens);}
+   
 
 
 entrarNaSala();

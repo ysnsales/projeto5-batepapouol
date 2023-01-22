@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8" />
-        <title>Tabela</title>
+        <title>Bate-papo UOL</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
         <link rel="stylesheet" href="reset.css" />
@@ -24,8 +24,8 @@
     <ul class="chat" id="chat"></ul>
 
     <div class="barra-inferior">
-        <input class="input" type="text" value="" placeholder="Escreva aqui...">
-        <button class="enviar" onclick="enviarMensagens()"><ion-icon name="paper-plane-outline"></ion-icon></button>
+        <input  data-test="input-message" class="input" type="text" value="" placeholder="Escreva aqui...">
+        <button  data-test="send-message" class="enviar" onclick="enviarMensagens()"><ion-icon name="paper-plane-outline"></ion-icon></button>
     </div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
