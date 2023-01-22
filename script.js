@@ -80,7 +80,13 @@ function mostrarMensagens (resposta2){
             <span class="hora">(${time})</span><strong> ${from} </strong> para<strong> ${to}: </strong>${text}
         </p></li>
         `;
+        }else if (type === "private_message") {
+            chat.innerHTML += ` <li class="${type}" data-test="message"><p>
+            <span class="hora">(${time})</span><strong> ${from} </strong> reservadamente para<strong> ${to}: </strong>${text}
+        </p></li>
+        `;
         }
+        
     }
     //mostrar ultima mensagem
     const chatLast = document.querySelector('.chat li:last-child');

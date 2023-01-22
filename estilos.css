@@ -73,7 +73,10 @@ p {
 .status {
     background-color: #DCDCDC;
 }
+.private_message {
+    background-color: #FFDEDE;
 
+}
 .hora {
     color:#AAAAAA;
     margin-right: 8px;
