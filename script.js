@@ -105,6 +105,7 @@ document.addEventListener('keypress', function(e){
 
 function enviarMensagens() {
     let texto = document.querySelector('.input').value;
+    if (texto!==''){
     mensagemEnviada = {
         from: nome,
         to: 'Todos',
@@ -118,6 +119,6 @@ function enviarMensagens() {
     enviada.catch(desconectado);
     enviada.then(buscarMensagens);}
    
-
+}
 
 entrarNaSala();
